@@ -1,0 +1,219 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+:root{
+    /* --color:red; */
+}
+
+body {
+    /* color: var(--color); */
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* =======================  Footer  =============================== */
+.container-footer {
+  color: white;
+  padding: 20px 50px;
+  /* margin-top: 100vh; */
+  background: linear-gradient(70deg, rgb(82, 82, 82), rgb(80, 80, 80));
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  transform: translateY(-100%);
+}
+.footer-separator{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+
+.social-icon{
+    width: 30px;
+    transition: all .5s;
+}
+.social-icon:hover{
+    transform: scale(1.2) rotate(360deg);
+}
+
+.footer__link{
+    color:white;
+}
+
+
+
+@media screen and (min-width:750px){
+
+    .footer-separator{
+        justify-content: space-around;
+    }
+}
+
+/* Nav */
+.container-nav{
+    display:flex;
+    padding:30px 50px;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.377);
+    border-bottom: 3px solid black;
+}
+
+
+/* nav */
+.nav{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;  
+    flex-wrap: wrap;  
+}
+.nav-title{
+    font-size:1.4rem;
+    font-weight: bold;
+}
+
+.nav-item{
+    
+    padding: 0;
+    margin: 0;
+}
+.nav-item__link{
+    display: block;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    background-color:rgba(209, 209, 209, 0.39);
+    font-weight: bold;
+    color: black;
+    transition: all .4s;
+}
+.nav-item__link:not(.nav-item__link--active):hover{
+    background: rgba(0, 0, 0, 0.205);
+    text-decoration:  solid underline black;
+    transform: scale(1);
+}
+.nav-item__link--active{
+    text-decoration: solid underline black 4px;
+}
+.container-banner{
+    min-height: 400px;
+    background: url("../assets/img/espacio-768x507.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    position: relative;
+}
+.container-banner > svg {
+    position: absolute;
+    bottom:0px;
+}
+.img-phone{
+    position: absolute;
+    top: 30px;
+    left: 90px;
+    width: 200px;
+    filter: drop-shadow(0px 0px 30px rgb(34, 33, 33));
+}
+/*  */
+
+main{
+    padding: 30px 100px;
+}
+
+/* Crad============================== */
+
+
+.container-product{
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    display:inline-flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    max-width: 300px;
+    padding: 10px;
+    box-shadow: 3px 3px 10px 3px rgba(0,0,0,0.2);
+    transition: box-shadow 0.4s;
+    /* overflow: hidden; */
+}
+.container-product:hover{
+    box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.4);
+}
+.container-product:hover > .product-header > img{
+    filter: blur(0px);
+    transform: scale(1.02);
+}
+.product-header{
+    width: 100%;
+    text-align: center;
+    border-bottom: 3px solid rgb(112, 106, 106);
+}
+.product-header > img{
+    max-height: 200px;
+    transition:  .4s;
+}
+
+/* kmskls */
+.product-info{
+    width: 100%;
+}
+.product-info__price::before{
+    content: "$";
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.product-info__description{
+
+}
+
+.container-product--discount::before{
+    background-color: red;
+    position: absolute;
+    content: "$";
+    display: grid;
+    place-items: center;
+    color: white;
+    box-shadow: 3px 3px 20px 2px rgba(0, 0, 0, 0.623);
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+/* Descripcion de pagina */
+.container-description-page > p{
+    font-size: 1.4rem;
+}
+
+
+
+
+/* ***************************** */
+
+.container-products{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: start;
+    align-items: start;
+    /* align-self: flex-start; */
+
+    /* columns: 100px 4; */
+}
